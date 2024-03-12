@@ -1,0 +1,129 @@
+.modal-basic {
+
+  padding: 0;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.6);
+
+  @include media-breakpoint-up(lg) {
+    top: 40px;
+    overflow: hidden;
+  }
+
+  &.opened {
+    display: flex;
+  }
+
+  .popbox_container {
+    max-width: 1200px;
+    width: 100%;
+    background-image: url(../assets/img/bg-mobile.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    border: 0;
+    
+    @include media-breakpoint-up(lg) {
+      // background-image: url(../assets/img/bg-desktop.jpg);
+      background-image: url(../assets/img/bg-mobile.jpg);
+
+      &--full {
+        max-width: none;
+      }
+    }
+  }
+
+  .scroller {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 0;
+    bottom: 40px;
+    padding-right: 40px;
+    overflow-y: auto;
+
+    @include media-breakpoint-up(lg) {
+      overflow-y: inherit;
+      top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .scrolled {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // position: absolute;
+    padding-top: 20px;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 656px;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 0;
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 23px;
+    height: 23px;
+    background-image: url(../assets/img/btn-close.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: all;
+    cursor: pointer;
+    z-index: 1;
+    
+    &.hide {
+      display: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: 20px;
+
+      transition: transform 0.2s;
+      transform: scale3d(1, 1, 1);
+
+      &:hover {
+        transform: scale3d(1.25, 1.25, 1.25);
+
+      }
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1;
+    margin-bottom: 35px;
+    margin-top: 0;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 48px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1.2;
+    margin-left: 27px;
+    padding-right: 10px;
+    margin-top: 0;
+    margin-bottom: 35px;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+}

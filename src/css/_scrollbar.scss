@@ -1,0 +1,18 @@
+.simplebar-track {
+  // cursor: pointer !important;
+  // position: absolute;
+  // z-index: 9999999;
+  &.simplebar-vertical {
+    width: 8px;
+    // cursor: pointer !important;
+  }
+}
+
+.simplebar-scrollbar {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.simplebar-content-wrapper {
+  outline: none;
+}

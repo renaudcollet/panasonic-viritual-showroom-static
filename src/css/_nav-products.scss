@@ -1,0 +1,18 @@
+.nav-products  {
+  position: absolute; 
+  top: 100px; 
+  left: 100px; 
+  z-index:100;
+  width: 200px;
+  bottom: 100px;
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    padding: 5px;
+    font-size: 12px;
+    background-color: hsl(216, 100%, 75%);
+  }
+}

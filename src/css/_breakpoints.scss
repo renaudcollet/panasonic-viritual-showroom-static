@@ -1,0 +1,6 @@
+/**
+  Bootstrap only used for breakpoints mixins, because Vuetify doesn't provide this
+**/
+@import 'vendors/bootstrap/functions';
+@import 'vendors/bootstrap/variables';
+@import 'vendors/bootstrap/mixins/breakpoints';

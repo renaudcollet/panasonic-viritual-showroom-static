@@ -1,0 +1,11 @@
+body .dg.ac {
+  display: none;
+  z-index: 10000;
+  user-select: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    top: 40px;
+    right: 40px;
+  }
+}

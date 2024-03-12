@@ -1,0 +1,11 @@
+.deco-bar {
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  margin-bottom: 30px;
+  
+  @include media-breakpoint-up(lg) {
+    width: 70px;
+    height: 10px;
+  }
+}

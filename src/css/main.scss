@@ -1,0 +1,98 @@
+@import 'vendors/normalize.css';
+@import 'vendors/bootstrap/bootstrap-grid';
+@import 'vendors/popbox';
+@import 'vendors/simplebar';
+@import 'vendors/embla';
+
+@import 'fonts';
+@import 'mixins';
+// @import 'breakpoints';
+@import 'breakpoints-viewer';
+@import 'keyframes';
+
+@import 'components/select-dropdown';
+@import 'select-dropdown';
+
+// Debug
+@import 'dat.gui';
+@import 'stats';
+@import 'debug';
+
+@import 'loader';
+@import 'joystick';
+@import 'chip';
+@import 'decorations';
+@import 'carousel';
+@import 'scrollbar';
+@import 'background';
+
+@import 'modal-basic';
+@import 'modal-product';
+@import 'modal-help';
+@import 'modal-language';
+@import 'modal-about';
+@import 'modal-product-list';
+@import 'modal-rec-sessions';
+@import 'modal-history';
+@import 'modal-newsletter';
+@import 'modal-cookies';
+@import 'menu';
+@import 'nav-rooms';
+@import 'nav-products';
+@import 'page_experience';
+@import 'video-texture';
+
+// only for exp.html
+@import 'exp';
+
+html {
+  font-family: $font-assistant;
+  letter-spacing: -0.5px;
+  // width: 100%;
+  // height: 100%;
+  // min-height: 100vh;
+}
+
+body {
+  // width: 100%;
+  // min-height: 100%;
+  display: flex;
+}
+
+html, body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+  touch-action: none; /* Pass all touches to javascript */
+}
+
+img { 
+  image-rendering: optimizeSpeed;             /*                     */
+  image-rendering: inherit;                   /* Firefox             */
+  image-rendering: -o-crisp-edges;            /* Opera               */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+  // image-rendering: pixelated;                 /* Chrome as of 2019   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
+  }
+
+
+
+/**
+  FWA / AWARDS
+**/
+#awwwards {
+  display: none;
+}
+@include media-breakpoint-up(lg) {
+  #awwwards {
+    display: block;
+  }
+}

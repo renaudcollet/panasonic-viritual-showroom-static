@@ -1,0 +1,50 @@
+.modal-about {
+
+  .logo {
+    width: 60%;
+    height: auto;
+    max-width: 235px;
+    
+    @include media-breakpoint-up(lg) {
+      width: 30%;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 200;
+    color: #313532;
+    font-style: normal;
+    line-height: 1;
+    margin-bottom: 35px;
+    margin-top: 30px;
+    margin-left: 40px;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 48px;
+      margin-top: 40px;
+      margin-left: 80px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1.2;
+    padding-right: 10px;
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    b, strong {
+      font-weight: 800;
+    }
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+      margin-left: 80px;
+    }
+  }
+}

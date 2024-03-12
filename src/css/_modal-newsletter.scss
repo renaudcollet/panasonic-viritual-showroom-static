@@ -1,0 +1,106 @@
+.modal-newsletter {
+
+  width: auto;
+  height: auto;
+  background: rgba(0, 0, 0, 0.60);
+  border-radius: 6px;
+  overflow: visible;
+  top: 60px;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: none;;
+
+  &.visible {
+    transition: none;
+    z-index: 990 !important;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    top: 50%;
+    right: 25%;
+    left: auto;
+    bottom: auto;
+    transform: none; 
+  }
+
+  .popbox_container {
+    clip-path: none;
+    background: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px 13px;
+  }
+
+  .btn-close {
+    background-image: url(../assets/img/btn-close-white.svg);
+    top: -16px;
+    right: -16px;
+    width: 32px;
+    height: 32px;
+    @include media-breakpoint-up(lg) {
+      top: -16px;
+      right: -16px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .title {
+    font-family: $font-assistant;
+    font-weight: 600;
+    font-size: 24px;
+    color: #c3cfb3;
+    white-space: nowrap;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 24px;
+    }
+  }
+
+  .text1 {
+    font-family: $font-assistant;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+
+  .text2 {
+    font-family: $font-assistant;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+    
+    @include media-breakpoint-up(lg) {
+      font-size: 22px;
+    }
+  }
+
+  a.link {
+    display: flex;
+    text-decoration: none;
+  }
+
+  .little-arrow {
+    margin-left: 5px;
+    transition: transform 0.5s;
+    transform: translateX(0);
+    display: inline-block;
+  }
+  @include media-breakpoint-up(lg) {
+    &:hover {
+      .little-arrow {
+        transition: transform 0.5s;
+        transform: translateX(5px);
+      }
+    }
+  }
+}

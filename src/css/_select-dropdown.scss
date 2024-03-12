@@ -1,0 +1,70 @@
+.vps-select {
+
+  .custom-select {
+    padding: 0;
+    border: none;
+
+    &__trigger {
+      font-family: $font-assistant;
+      color: #ffffff;
+      font-weight: 500;
+      background-color: #a8a9aa;
+      border-color: transparent;
+      border-width: 0;
+      border-style: none;
+      border-radius: 30px;
+      height: 28px;
+      line-height: 28px;
+      
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+        height: 25px;
+      }
+    }
+
+    .arrow {
+      height: 5px;
+      width: 11px;
+
+      // Arrow image
+      background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11px' height='5px'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M5.521,4.908 L0.440,0.566 L10.600,0.566 L5.521,4.908 Z'/%3E%3C/svg%3E");
+
+      // hide original css arrow
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &.open .arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .custom-options {
+    bottom: 100%;
+    top: auto;
+    line-height: 40px;
+    border: 0;
+    max-height: 190px;
+    overflow: auto;
+      
+    // @include media-breakpoint-up(lg) {
+    //   top: 100%;
+    //   bottom: auto;
+    // }
+  }
+
+  .custom-option.selected {
+    background: #a8a9aa;
+  }
+  .custom-option {
+    font-weight: 500;
+      
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+
+}

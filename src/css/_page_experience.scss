@@ -1,0 +1,95 @@
+.experience-canvas {
+  touch-action: none;
+}
+
+.page_experience {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+  
+  /*
+  Prevent scroll down to reload page on Chrome Android
+  https://w3bits.com/prevent-chrome-pull-to-refresh-css/
+  */
+  /* Break the flow */
+  position: absolute;
+  top: 0px;
+
+  /* Give them all the available space */
+  width: 100%;
+  height: 100%;
+
+  /* Remove the margins if any */
+  margin: 0;
+
+  /* Allow them to scroll down the document */
+  // overflow-y: hidden;
+  overflow: hidden;
+
+  &__block-logo {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      & > img {
+        width: 40vw;
+      }
+    }
+  }
+
+  &__browse-desktop {
+    width: 80%;
+    margin: 20px auto 0;
+    word-wrap: normal;
+  }
+
+  &__logo-overlay {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 60px;
+      right: 40px;
+      width: 200px;
+      height: 100px;
+      pointer-events: none;
+      
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .orbit-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    overflow: hidden;
+    pointer-events: inherit;
+  }
+
+  .overview-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+}

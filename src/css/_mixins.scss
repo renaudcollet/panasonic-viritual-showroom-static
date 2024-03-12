@@ -1,0 +1,18 @@
+
+/**
+Custom break point for aspect ratio
+16/8 is for screens that are small in height compared to width
+
+NOT WORKING... ??
+**/
+@mixin media-breakpoint-up-ratio($name, $ratio: 16/8, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) and (min-aspect-ratio: $ratio) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+

@@ -1,0 +1,46 @@
+.chip-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  overflow: hidden;
+  pointer-events: inherit;
+}
+
+.chip {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #333333;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-image: url(../assets/img/chip.png);
+  background-position: center;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  pointer-events: all;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.chip-rec {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #333333;
+  text-align: center;
+  top: 0;
+  left: 71px;
+  background-image: url(../assets/img/chip-rec.png);
+  background-position: center;
+  background-size: contain;
+  width: 89px;
+  height: 36px;
+  pointer-events: all;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
