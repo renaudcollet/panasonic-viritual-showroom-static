@@ -19,6 +19,7 @@ import Chip from './ui/chip'
 import * as Optimizer from '../utils/Optimizer'
 import AudioPlayer from './audio/audio-player'
 import CreateVideo from './video/create-video'
+import * as LogStyle from '../log-style'
 
 export default class Game {
   private scene: Scene
@@ -120,7 +121,7 @@ export default class Game {
     // Env Map
     // https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_envmaps.html
     const loader = new CubeTextureLoader()
-    loader.setPath( window.theme_path + 'assets/img/' )
+    loader.setPath( window.theme_path + 'img/' )
 
     // this.backgroundTexture = loader.load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg' ] )
     // this.backgroundTexture.encoding = sRGBEncoding
@@ -825,6 +826,8 @@ export default class Game {
           if(objData.sub_cat && objData.sub_cat === 'tv') {
             const _meshVideo: Mesh = _obj3d.getObjectByName('video') as Mesh
             if(_meshVideo) {
+              console.log('%cvideo path', LogStyle.STYLE_INFOS, window.products_videos[objData.id].video);
+              
               this.aVideosIn3D.push({
                 obj3D: _obj3d,
                 meshTV: _meshVideo,

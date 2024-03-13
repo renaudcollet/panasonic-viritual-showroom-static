@@ -7,7 +7,7 @@ export default class AudioPlayer {
 
   private _aFiles: Array<AudioData> = [
     new AudioData({
-      src: window.theme_path + '/audio/Nymphea_short.mp3',
+      src: window.theme_path + 'audio/Nymphea_short.mp3',
       loop: true,
       howl: null
     })

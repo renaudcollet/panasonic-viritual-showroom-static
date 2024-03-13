@@ -50,7 +50,7 @@ export default class Product3d {
       // Scene
       this.scene = new Scene()
       const loader = new CubeTextureLoader()
-      loader.setPath( window.theme_path + 'assets/img/' )
+      loader.setPath( window.theme_path + 'img/' )
   
       // let textureCube: CubeTexture = loader.load( [ 'posx.jpg', 'negx.jpg', 'posy.jpg', 'negy.jpg', 'posz.jpg', 'negz.jpg' ] )
       this.envMapTexture = loader.load( [ 'nx-fef8e7.jpg', 'nx-fef8e7.jpg', 'nx-fef8e7.jpg', 'nx-fef8e7.jpg', 'nx-fef8e7.jpg', 'nx-fef8e7.jpg' ] )
